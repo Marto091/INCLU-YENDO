@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "nombre": "Fortunato Lacámera",
+    "etiquetas": "Comuna 1 | San Telmo | Discapacidades Motoras"
+  },
+  {
+    "id": 2,
+    "nombre": "Alfonsina Storni",
+    "etiquetas": "Comuna 3 | Balvanera "
+  },
+  {
+    "id": 3,
+    "nombre": "Espacio Cultural Julián Centeya",
+    "etiquetas": "Comuna 3 | San Cristóbal"
+  },
+  {
+    "id": 4,
+    "nombre": "Del Bajo Flores",
+    "etiquetas": "Comuna 4 | Nueva Pompeya"
+  },
+  {
+    "id": 5,
+    "nombre": "Homero Manzi",
+    "etiquetas": "Comuna 4 | Nueva Pompeya"
+  },
+  {
+    "id": 6,
+    "nombre": "La Usina",
+    "etiquetas": "Comuna 4 | Barracas"
+  },
+  {
+    "id": 7,
+    "nombre": "Nuestra Tierra",
+    "etiquetas": "Comuna 4 | Barracas"
+  },
+  {
+    "id": 8,
+    "nombre": "Nicolás Olivari",
+    "etiquetas": "Comuna 5 | Boedo"
+  },
+  {
+    "id": 9,
+    "nombre": "Biblioteca Argentina para Ciegos",
+    "etiquetas": "Comuna 5 | Almagro"
+  },
+  {
+    "id": 10,
+    "nombre": "Alberto Olmedo",
+    "etiquetas": "Comuna 6 | Villa Crespo"
+  },
+  {
+    "id": 11,
+    "nombre": "El Eternauta",
+    "etiquetas": "Comuna 6 | Caballito"
+  },
+  {
+    "id": 12,
+    "nombre": "Lola Mora",
+    "etiquetas": "Comuna 6 | Caballito"
+  },
+  {
+    "id": 13,
+    "nombre": "Sebastián Piana",
+    "etiquetas": "Comuna 6 | Caballito"
+  },
+  {
+    "id": 14,
+    "nombre": "Barrio Rivadavia",
+    "etiquetas": "Comuna 7 | Bajo Flores"
+  },
+  {
+    "id": 15,
+    "nombre": "Roberto Arlt",
+    "etiquetas": "Comuna 7 | Flores" 
+  },
+  {
+    "id": 16,
+    "nombre": "Barrio Copello",
+    "etiquetas": "Comuna 8 | Villa Lugano" 
+  },
+  {
+    "id": 17,
+    "nombre": "Juan Carlos Castagnino",
+    "etiquetas": "Comuna 8 | Villa Lugano"
+  },
+  {
+    "id": 18,
+    "nombre": "Saladiyo",
+    "etiquetas": "Comuna 8 | Villa Lugano"
+  },
+  {
+    "id": 19,
+    "nombre": "Elías Castelnuovo",
+    "etiquetas": "Comuna 9 | Liniers"
+  },
+  {
+    "id": 20,
+    "nombre": "Macedonio Fernández",
+    "etiquetas": "Comuna 9 | Mataderos"
+  },
+  {
+    "id": 21,
+    "nombre": "Baldomero F. Moreno",
+    "etiquetas": "Comuna 10 | Floresta"
+  },
+  {
+    "id": 22,
+    "nombre": "El Taller",
+    "etiquetas": "Comuna 10 | Monte Castro"
+  },
+  {
+    "id": 23,
+    "nombre": "La Casita de la Selva",
+    "etiquetas": "Comuna 10 | Vélez Sarsfield"
+  },
+  {
+    "id": 24,
+    "nombre": "Devoto",
+    "etiquetas": "Comuna 11 | Villa Devoto"
+  },
+  {
+    "id": 25,
+    "nombre": "La Paternal",
+    "etiquetas": "Comuna 11 | Villa General Mitre"
+  },
+  {
+    "id": 26,
+    "nombre": "Discepolín",
+    "etiquetas": "Comuna 12 | Saavedra"
+  },
+  {
+    "id": 27,
+    "nombre": "Colegiales",
+    "etiquetas": "Comuna 13 | Colegiales"
+  },
+  {
+    "id": 28,
+    "nombre": "Julio Cortázar",
+    "etiquetas": "Comuna 13 | Núñez"
+  },
+  {
+    "id": 29,
+    "nombre": "Tato Bores",
+    "etiquetas": "Comuna 14 | Palermo"
+  }  
+]

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/banderita.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Inclu-Yendo</title>
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+<body>
+  <header>
+    <div class="h-auto" id="l-header">
+      <div id="imagen-logo"><img src="./img/Disability_flag.svg"></div>
+      <span id="container-text"><h1>INCLU-YENDO</h1></span>
+    </div>
+    <div class="h-auto" id="m-header">
+      <!---Aca se pone todo lo que uno quiera en el medio del header-->
+      <button class="btn btn"><a href="./search_bar.html" style="text-decoration: none; color: white;">¿A dónde te gustaría ir hoy?</a></button>
+    </div>
+    <div class="h-auto" id="r-header">
+        <button class="btn btn"><a href="https://drive.google.com/file/d/18Q2ldwbEiIFAxI8qq6YYxBZqN4bqdcgb/view?usp=drivesdk">¿Quiénes Somos?</a></button>
+        <button class="btn btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><a>Iniciar Sesión</a></button>
+        <button class="btn btn" data-bs-toggle="modal" data-bs-target="#exampleModal1"><a>Registrarse</a></button>
+    </div>
+    </nav>
+  </header>
+<!-- MODALS -->
+
+<!-- INICIO DE SESIÓN -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ingresa a tu cuenta</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="modal-body modalInicie">
+        
+        <h1 class="tituloinre">INCLU-YENDO</h1>
+
+        <form action="" id="formularioingreso">
+          <div class="iniciodesesion">
+            <input type="email" name="email" placeholder="Email" class="labelInicie" required> 
+          </div>
+          <div class="iniciodesesion">
+            <input type="password" name="password" placeholder="Contraseña" class="labelInicie" required>
+          </div>
+          <div class="iniciodesesion">
+            <button type="submit" class="btn btn-primary botondeingresar" onclick="validarformulario1()">Iniciar sesión</button>
+            <button type="reset" class="btn btn-primary resetinicia" onclick="resetinicia()">Inicar sesión en otra cuenta</button>
+          </div>
+          <p id="cuentanoexiste" class="iniciodesesion"></p>
+          <p id="iniciobien" class="iniciodesesion"></p>
+        </form>
+      </div>
+      <div class="modal-footer">
+       <div id="cerrarinicio">
+        <a></a>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REGISTRO -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Creá tu cuenta</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="modal-body modalInicie">
+        
+        <h1 class="tituloinre">INCLU-YENDO</h1>
+
+        <form action="" id="formularioregistro">
+          <div class="iniciodesesion">
+            <input type="text" name="name" placeholder="Nombre" class="labelInicie" required>
+          </div>
+          <div class="iniciodesesion">
+              <input type="email" name="email" placeholder="Email" class="labelInicie" required>
+          </div>
+          <div class="iniciodesesion">
+            <input type="tel" name="number" placeholder="Número de celular" class="labelInicie" pattern="[+54]{3}[911]{3}[0-9]{4}[0-9]{4}" required>
+          </div>
+          <div class="iniciodesesion">
+            <input type="date" name="date" placeholder="Fecha de nacimiento" class="labelInicie" required>
+          </div>
+          <div class="iniciodesesion">
+            <input type="password" name="password" placeholder="Contraseña" class="labelInicie" required>
+          </div>
+          <div class="iniciodesesion">
+           <input type="checkbox" name="checkbox" required> He leído y acepto los <a href="" class="terminoscond">  Términos y Condiciones</a>
+          </div>
+          <div class="iniciodesesion">
+            <button type="submit" class="btn btn-primary botondeingresar" onclick="promptingresar()">Registrarse</button>
+            <button type="reset" class="btn btn-primary" onclick="resetregi()">Crear otra cuenta</button>
+          </div>
+          <p id="registradobien" class="iniciodesesion"></p>
+        </form>
+      </div>
+      <div class="modal-footer">
+       <div class="iniciodesesion">
+         <a id="iralinicio"></a>
+         <a id="cerrarregistro"></a>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</header>
+
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+             </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/cuatro.png" class="d-block w-100" alt="100">
+                <div class="overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h3>¿QUIENES SOMOS?</h3>
+              <p>Somos un grupo de jóvenes estudiantes de Desarrollo Web 2 Intensivo, quienes creamos esta página web con el objetivo de brindar a personas con discapacidades el acceso a las actividades culturales y deportivas que da la Ciudad Autónoma de Buenos Aires.</p>
+            </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/deporte.png" class="d-block w-100" alt="100">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    <div id="body-body">
+
+    
+ 
+    <div class="card-container">
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://img.oastatic.com/img2/57078480/320x320r/teatro-colon-buenos-aires-argentina-.jpg" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 1</h5>
+            <p class="card-text">Esta compuesta con varias atracciones como la casa rosada, el teatro colon, etc. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/Retiro,+CABA/@-34.5893978,-58.3767883,15z/data=!3m1!4b1!4m5!3m4!1s0x95bccab6fb9fda31:0xc63b4bf37c945929!8m2!3d-34.5896061!4d-58.3802473">Retiro</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/San+Nicol%C3%A1s,+CABA/@-34.6039215,-58.3890462,15z/data=!3m1!4b1!4m5!3m4!1s0x95bccacf8f55dcf5:0xd073935716337382!8m2!3d-34.603699!4d-58.381163">San Nicolas</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/San+Telmo,+CABA/@-34.6225599,-58.3790128,15z/data=!3m1!4b1!4m5!3m4!1s0x95bccb2d125e1c01:0xacd97607979875ab!8m2!3d-34.6218351!4d-58.3713942">San Telmo</a> </li>
+          </ul>
+        </div>
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh3.googleusercontent.com/gps-proxy/ALm4wwlV3oueOfhtrAsHyDsSzl3QqKWdzGmIxFhfGJRwjWKILQlKzlzajWMLKn58eYPFqgLhNEgVH67M5fsIzVRRBdUuvwPtYhsqFKTsup4-mcZL14P2Qhax9Z8JW8M_1Qt_If6__cb_iWydGTEhf5aWx5waJUTvmoei97OsUITKBkexyxpGW-9R7P8N=w408-h272-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 2</h5>
+            <p class="card-text">Lugares imperdibles de recoleta como <a href="https://www.google.com/maps/place/Fundaci%C3%B3n+Cosechando+Alegr%C3%ADa/@-34.5906976,-58.4019057,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcca9984619ae3:0xafeb1634efa34e56!8m2!3d-34.590702!4d-58.399717?hl=es">Fundación cosechando alegría </a>. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/Recoleta,+CABA/@-34.5847911,-58.4138525,14z/data=!3m1!4b1!4m5!3m4!1s0x95bcca99c609fc2f:0x392ca99351808a75!8m2!3d-34.5873825!4d-58.3972762?hl=es">Recoleta</a></li>
+          </ul>
+        </div>
+
+      <div class="contenedores" style="width: 18rem;">
+        <img src="https://www.alternativaprop.com/blog/wp-content/uploads/2017/08/balvanera3.jpg" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Comuna 3</h5>
+          <p class="card-text">En balvanera encontramos centros como <a href="https://www.google.com/maps/place/Centro+de+d%C3%ADa+Club+de+los+Sue%C3%B1os/@-34.6022995,-58.412363,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcca8c426dda21:0x3b23d1bdd11d74b3!8m2!3d-34.6023039!4d-58.4101743?hl=es">Centro de Dia Club de los sueños</a>. </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="https://www.google.com/maps/place/Retiro,+CABA/@-34.5893978,-58.37">Balvanera</a></li>
+          <li class="list-group-item"> <a href="https://www.google.com/maps/place/San+Crist%C3%B3bal,+CABA/@-34.6242394,-58.4106115,15z/data=!3m1!4b1!4m5!3m4!1s0x95bccb1d945c8459:0xccf24520f594eeef!8m2!3d-34.6237933!4d-58.4022563?hl=es">San Cristobal</a></li>
+        </ul>
+      </div>
+
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh3.googleusercontent.com/gps-proxy/ALm4wwmrUAB_67swpf7KJG1EFuaPmil9okl7TLIyilF1XZ2cVZ2ONM7208vIq0Fry6_b55GNB1Fb8OQ8d8IYJg48xmi7ac2jO9BF434XO8FJa5xuC4Bzz6SjRVHR5tW1lsRXJTndQ2-wq30Ykx8ffl8-pIguOPZwVoXRrInik-1a9A1COpS-GGjhf1uIBw=w408-h272-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 4</h5>
+            <p class="card-text">Esta compuesta con varias atracciones como la casa rosada, el teatro colon, etc. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/La+Boca,+CABA/@-34.6375518,-58.379205,14z/data=!3m1!4b1!4m5!3m4!1s0x95a334b0bf5ff0a5:0x3858a68c0d7599a0!8m2!3d-34.6344961!4d-58.3631337?hl=es">La Boca</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Barracas,+CABA/@-34.6444877,-58.4020787,14z/data=!3m1!4b1!4m5!3m4!1s0x95bccb5af2d5c42f:0xab1261cf6e8c2f2d!8m2!3d-34.6454035!4d-58.3812839?hl=es">Barracas</a></li>
+            <li class="list-group-item"> <a href="https://maps.app.goo.gl/icKnSTb24SXE129e6">Parque Patricios</a> </li>
+            <li class="list-group-item"> <a href="https://maps.app.goo.gl/e8La31UjgS33LKi3A">Nueva Pompeya</a></li>
+          </ul>
+        </div>
+
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipPP5ZH0xl0kopfzc9sAEXapjTP5or7Oo7RoxZSx=w426-h240-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 5</h5>
+            <p class="card-text">Dentro de la comuna encontramos al club Almagro con actividades para ustedes! <a href="http://almagro.club/nuevo-taller-para-personas-con-discapacidad/">Club Almagro</a></p>
+          </div>
+          <li class="list-group-item"><a href="https://maps.app.goo.gl/VimnXqY7sn1sa9Zx8">Almagro</a></li>
+          <li class="list-group-item"> <a href="https://maps.app.goo.gl/wn1Nx7JpHpmu7XEv8">Boedo</a></li>
+          <ul class="list-group list-group-flush">
+          </ul>
+        </div>
+
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh3.googleusercontent.com/gps-proxy/ALm4wwlTXupHhRBwX6b4uHY0IgzNo-8gxPCSmriuLHXsU5odke2wOw9PoQZhG5tuISB2ihPg4BH_tBWWV5ijNdNfSwZIXNSzYqv8luw5vU2YW0HGd2eR0JqCxd1E_LHTJTs3a1pMkyMKCtAAX8Vml2amYeluUYz0VbBPvgJiIof-M5CxkEVducSUyX1K=w408-h272-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 6</h5>
+            <p class="card-text">Encontramos un centro muy apto y equipado para ustedes, este tiene dos sedes y es el <a href="https://fundacionipna.org.ar/centro-de-dia/ ">Centro de dia</a></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> <a href="https://maps.app.goo.gl/1Jys2iU1jVJ4Pfp39">Caballito</a></li>
+          </ul>
+        </div>
+
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipNcWr9fwaj2dWzn1N5hSt3wVkwcKuStvafmvGqv=w408-h725-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 7</h5>
+            <p class="card-text">Encontramos a centro de día que aloja también con una excelente atención! Llamado <a href="https://g.co/kgs/8GhTfh">Los jazmines</a>  </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://maps.app.goo.gl/y8QxjpTpKUvsX1Et7">Flores</a></li>
+            <li class="list-group-item"> <a href="https://maps.app.goo.gl/1FFz4nfkc2wKwcdS7"></a>Parque Chacabuco</li>
+          </ul>
+        </div>
+
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipNiXEc52Gd0PvqjyKKYLlwFiZ440OFWdajo8WH2=w408-h449-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 8</h5>
+            <p class="card-text">Nos encontramos un hermoso centro de acojida para ustedes <a href="https://www.google.com/maps/place/Asociacion+Juvenil+Araucana/@-34.6573324,-58.4427532,17z/data=!3m1!4b1!4m5!3m4!1s0x95bccbeb411af13f:0xcaee59c37801afc3!8m2!3d-34.6573324!4d-58.4405645?hl=es">Asociacion Juvenil Araucana</p>a></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/Villa+Soldati,+CABA/@-34.6679569,-58.464475,14z/data=!3m1!4b1!4m5!3m4!1s0x95bccbf6ecc6416b:0x7e1a82e0defbc2b3!8m2!3d-34.6595958!4d-58.442814?hl=es">Villa Soldati</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Villa+Riachuelo,+CABA/@-34.692698,-58.481258,14z/data=!3m1!4b1!4m5!3m4!1s0x95bccea79aa82e0d:0x4d9922996c7b1399!8m2!3d-34.6918571!4d-58.471441?hl=es">Villa Riachuelo</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Villa+Lugano,+CABA/@-34.6748948,-58.4939558,14z/data=!3m1!4b1!4m5!3m4!1s0x95bcc9495154d385:0x86babb4a76e51dd2!8m2!3d-34.6729225!4d-58.4810744?hl=es">Villa Lugano</a> </li>
+          </ul>
+        </div>
+
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipMYT_VX-F844MieaiQad2L8DVQ9em6Eq-27pxho=w408-h839-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 9 </h5>
+            <p class="card-text">. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/Liniers,+CABA/@-34.644985,-58.524858,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcc850a8ddd4a1:0x6923689fbcc4f458!8m2!3d-34.6462703!4d-58.5201662?hl=es">Liniers</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Mataderos,+CABA/@-34.658921,-58.5197912,14z/data=!3m1!4b1!4m5!3m4!1s0x95bcc91bbfbf9d17:0xdb535b8d8548bdee!8m2!3d-34.6600786!4d-58.5031222?hl=es">Mataderos</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Parque+Avellaneda,+CABA/@-34.6507895,-58.4953383,14z/data=!3m1!4b1!4m5!3m4!1s0x95bcc971e76c85c7:0x11f078e0f40106c6!8m2!3d-34.6458562!4d-58.4851927?hl=es">Parque Avellaneda</a> </li>
+          </ul>
+        </div>
+
+    <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipOcjUMC00P95JdDctWW14m9cC9gsH-2Nnuf2htw=w408-h518-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 10 </h5>
+            <p class="card-text">. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/Villa+Real,+CABA/@-34.6191111,-58.5329892,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcc8247b5a7299:0x38e937ff336561e1!8m2!3d-34.6197129!4d-58.5240145?hl=es">Villa real</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Monte+Castro,+CABA/@-34.6187877,-58.5158873,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcc9cd6c5b1d55:0x97258a11bd724a9c!8m2!3d-34.6183291!4d-58.5057331?hl=es">Montecastro</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Versalles,+CABA/@-34.6291724,-58.5237158,16z/data=!3m1!4b1!4m5!3m4!1s0x95bcc838f6b8f6eb:0x9154e92cd6fcb2e2!8m2!3d-34.6307822!4d-58.5208439?hl=es">Versalles</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Floresta,+CABA/@-34.6278186,-58.4935067,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcc99546769e49:0x4d754ad5ca377710!8m2!3d-34.6282465!4d-58.4844109?hl=es">Floresta</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/V%C3%A9lez+S%C3%A1rsfield,+CABA/@-34.6313349,-58.5016743,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcc9bb359a6ff5:0x4e9d383447a62686!8m2!3d-34.6314852!4d-58.4923493?hl=es">Velez sarfield</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Villa+Luro,+CABA/@-34.6350434,-58.5108488,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcc9b68fab95b5:0xbaf48a44b765c9eb!8m2!3d-34.638061!4d-58.5039934?hl=es">Villa Luro</a></li>
+          </ul>
+        </div>
+        
+      <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipN6jKdG32PaYByUeijZmSgAmUVgqF9rx5m8JK9f=w408-h431-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 11 </h5>
+            <p class="card-text">. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/Villa+General+Mitre,+CABA/@-34.6105074,-58.4781969,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcc9fa320927d7:0x586fe45c76cb268b!8m2!3d-34.6105042!4d-58.4716823?hl=es">Villa General Mitre</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Villa+Devoto,+CABA/@-34.6005416,-58.5491112,14z/data=!3m1!4b1!4m5!3m4!1s0x95bcb7d17aecb4c5:0x2ec18aeefab8400!8m2!3d-34.6006877!4d-58.5143934?hl=es">Villa Devoto</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Villa+del+Parque,+CABA/@-34.6059132,-58.4987992,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcc9df44319d89:0x72e02046997c8cef!8m2!3d-34.6044798!4d-58.4926129?hl=es">Villa del Parque</a> </li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Villa+Santa+Rita,+CABA/@-34.6163779,-58.4919581,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcc9e7d4783cbf:0x3bb92b54b171b6a2!8m2!3d-34.6137526!4d-58.4831786?hl=es">Villa Santa Rita.</a> </li>
+          </ul>
+        </div>
+
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipNHoV9v_GaGPfVnq2-atWEsiWlYiW0ldwCYNU3t=w408-h306-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 12 </h5>
+            <p class="card-text">. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/Coghlan,+CABA/@-34.560191,-58.4838226,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcb688a5472f13:0xe135def37ccd430d!8m2!3d-34.5601594!4d-58.4715658?hl=es">Coghlan</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Saavedra,+CABA/@-34.554348,-58.5066694,14z/data=!3m1!4b1!4m5!3m4!1s0x95bcb6ecec1f5741:0x42502844d305770b!8m2!3d-34.5545188!4d-58.4915986?hl=es">Saavedra</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Villa+Urquiza,+CABA/@-34.5719599,-58.5062564,14z/data=!3m1!4b1!4m5!3m4!1s0x95bcb65c360890c1:0x8bd20bac2f970066!8m2!3d-34.5705179!4d-58.4914578?hl=es">Villa urquiza</a> </li>
+          <li class="list-group-item"> <a href="https://www.google.com/maps/place/Villa+Pueyrred%C3%B3n,+CABA/@-34.5818613,-58.5195592,14z/data=!3m1!4b1!4m5!3m4!1s0x95bcb64c098b0e67:0x4f28c3a2b8ffefe4!8m2!3d-34.5808009!4d-58.5054065?hl=es">Villa Pueyrredón</a> </li>
+          </ul>
+        </div>
+
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipNjOmLeo9Xs5cQ1A5EpdVRMysEC4UCNc9dcoAUx=w408-h306-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 13</h5>
+            <p class="card-text">. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/N%C3%BA%C3%B1ez,+CABA/@-34.5427362,-58.4786042,14z/data=!3m1!4b1!4m5!3m4!1s0x95bcb420f6902f33:0x319825d17bcaba0d!8m2!3d-34.5427503!4d-58.4601452?hl=es">Núñez</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Belgrano,+CABA/@-34.5554685,-58.4682957,14z/data=!3m1!4b1!4m5!3m4!1s0x95bcb5d28526611d:0xbcb585a9ddc70069!8m2!3d-34.5620844!4d-58.4566864?hl=es">Belgrano</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Colegiales,+CABA/@-34.5746496,-58.460402,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcb5dd407c17db:0xf700e263552c9fa5!8m2!3d-34.5760225!4d-58.4483554?hl=es">Colegiales</a> </li>
+          </ul>
+        </div>
+
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipPQNABLA1kSsXQTtj7TUiRUYBOP_ZE-A7LEeDtW=w426-h240-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 14 </h5>
+            <p class="card-text">. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/Palermo,+CABA/@-34.5734283,-58.456035,13z/data=!3m1!4b1!4m5!3m4!1s0x95bcb59c771eb933:0x6b3113b596d78c69!8m2!3d-34.5780655!4d-58.4265317?hl=es">Palermo</a></li>
+          </ul>
+        </div>
+
+        <div class="contenedores" style="width: 18rem;">
+          <img src="https://lh3.googleusercontent.com/gps-proxy/ALm4wwmW6bQqeKKiMd58F7GO_kCawMzNBuWY4oGP_2lqCmonGybHOcPDiQhtmGK6aL7btHC7-HXvhFJw7NWsEmto5u_lXLJxPmcFU1h2c2VcdmuYbnqhlZjbQ5JnxO5f8FzFFKOG5RWs3hQmoQ6c5MucYi6D3GiYhXtRGAjl-hSdKycmXH2SMI9g1RoD=w408-h272-k-no" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Comuna 15 </h5>
+            <p class="card-text">. </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/Chacarita,+CABA/@-34.5880643,-58.4615831,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcb5fab4d7e7c7:0xc0677dc30b75b92b!8m2!3d-34.5859985!4d-58.4544363?hl=es">Chacarita</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Villa+Crespo,+CABA/@-34.5980709,-58.4499034,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcca0c687ee0b7:0x879b67a1fd77fb98!8m2!3d-34.5947209!4d-58.4442897?hl=es">Villa Crespo</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Paternal,+CABA/@-34.596379,-58.4762884,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcb6026b44ff55:0x68278e90bc556fd2!8m2!3d-34.5958969!4d-58.4715637?hl=es">La Paternal</a> </li>
+            <li class="list-group-item"><a href="https://www.google.com/maps/place/Villa+Ort%C3%BAzar,+CABA/@-34.5815052,-58.4774425,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcb60b43504c43:0xefcaf1e310341a!8m2!3d-34.5785944!4d-58.4696036?hl=es">Villa Ortúzar</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Agronom%C3%ADa,+CABA/@-34.5922441,-58.4984314,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcb616322a12c9:0xa1fa07ef71e7079!8m2!3d-34.5950398!4d-58.4942924?hl=es">Agronomía</a></li>
+            <li class="list-group-item"> <a href="https://www.google.com/maps/place/Parque+Chas,+CABA/@-34.5848792,-58.4885613,15z/data=!3m1!4b1!4m5!3m4!1s0x95bcb66ca6ae7bf1:0xf28cf4a38e0a9db9!8m2!3d-34.58423!4d-58.4787009?hl=es"> Parque Chas</a> </li>
+          </ul>
+        </div>
+    </div>
+
+
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item" id="primero">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Comuna 1
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Todas las personas con discapacidad pueden realizar las actividades que ofrece el <strong>Centro Cultural Fortunato Lacámera</strong> (Av. San Juan 353, San Telmo). Cuenta con rampa de entrada y baño adaptado. <strong>Tu próxima visita puede ser <a  href="https://www.facebook.com/ccflacamera/">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            La <strong>Reserva Ecológica Costanera Sur</strong> (Av. Dr. Tristán Achával Rodríguez 1550, Puerto Madero) es accesible para personas discapacidad intelectual y/o psicosocial, hipoacusia, sordera, ceguera, baja visión y talla pequeña, y es practicable con ayuda para personas con discapacidad visceral y motora. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/reserva-ecologica">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Comuna 2
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+         <div class="accordion-body">
+            El <strong>Museo Nacional de Bellas Artes</strong> (Av. del Libertador 1473, Recoleta) ofrece audioguías para personas ciegas o con baja visión. Cuenta con aparcamiento, entrada, ascensor y baño accesible para sillas de ruedas. Entrada accesible para sillas de ruedas. Ascensor accesible para sillas de ruedas. <strong>Tu próxima visita puede ser <a  href="https://www.bellasartes.gob.ar/paginas/planea-tu-visita/#visita-al-museo-nacional-de-bellas-artes">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            El <strong>Centro Cultural Recoleta</strong> (Junín 1930, Recoleta) es accesible para personas con discapacidad intelectual y/o psicosocial, visceral y de talla pequeña, y es practicable con ayuda para personas con discapacidad motora, hipoacusia, sordera, ceguera y baja visión. También se puede solicitar el armado de visitas guiadas para discapacidad motora. <strong>Tu próxima visita puede ser <a  href="http://centroculturalrecoleta.org/">acá</a>.</strong>
+          </div>
+         <div class="accordion-body">
+            La <strong>Biblioteca Nacional Mariano Moreno</strong> (Agüero 2502, Recoleta) cuenta con una sala destinada a no videntes y ofrece materiales de lectura, discos y gráficos en relieve para niños, adolescentes y adultos. También cuenta con entrada y baño accesible para sillas de ruedas. <strong>Tu próxima visita puede ser <a  href="https://www.bn.gov.ar/biblioteca/salas/novidentes">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            El <strong>Centro de Convenciones Buenos Aires</strong> (Av. Pres. Figueroa Alcorta 2099, Recoleta) brinda la siguiente atención a las personas con discapacidad visual: informa sobre las condiciones de accesibilidad; consulta por necesidades especiales; asiste, de ser necesario, en la apertura de puertas; informa sobre los servicios del establecimiento, horarios, actividades y accesibilidad del mismo; acompaña a la persona y le indica la disposición de los espacios/stands; ofrece un recorrido por el establecimiento indicando espacios y servicios. <strong>Tu próxima visita puede ser <a  href="https://www.facebook.com/CentrodeConvencionesBuenosAires?locale=es_LA">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Comuna 3
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            En el <strong>Centro Cultural Alfonsina Storni</strong> (Tucumán 353, Balvanera) no hay actividades especialmente para personas con discapacidad, pero son bienvenidas a incorporarse en la actividad de su preferencia. La grilla se encuentra en sus redes sociales. Hay acceso para silla de ruedas, ya que es una escuela con rampa. <strong>Tu próxima visita puede ser <a  href="https://www.facebook.com/culturalfonsina">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            Las personas con discapacidad pueden visitar las muestras y espectáculos del <strong>Espacio Cultural Julián Centeya</strong> (Av. San Juan 3255, San Cristóbal). Cuenta con rampa de acceso y baño adaptado. <strong>Tu próxima visita puede ser <a  href="https://www.facebook.com/ecjuliancenteya">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            El <strong>Polideportivo Martín Fierro</strong> (Oruro 1300, San Cristóbal) ofrece clases de natación para personas con Síndrome de Down. <strong>Tu próxima visita puede ser <a  href="https://goo.gl/maps/3xcSGRx3TqAPspGZ9">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Comuna 4
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            La <strong>Usina del Arte</strong> (Agustín R. Caffarena 1, La Boca) cuenta con rampas en la mayoría de sus salas y ascensores para todos los pisos. No dispone de sillas de ruedas para visitantes con problemas de movilidad. <strong>Tu próxima visita puede ser <a  href="https://www.instagram.com/usinadelarte/?hl=es"> acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            La <strong>Fundación Proa</strong> (Av. Pedro de Mendoza 1929, La Boca) es accesible para personas con discapacidad visceral, motora y de talla pequeña, y es practicable con ayuda para personas con discapacidad intelectual y/o psicosocial, hipoacusia y baja visión. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/fundacion-proa-milla-cultural-del-sur"> acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Comuna 5
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            La <strong>Biblioteca Argentina Para Ciegos</strong> (Lezica 3909, Almagro) brinda talleres presenciales y virtuales para personas con o sin discapacidad visual, al igual que presta libros en braille y audio. <strong>Tu próxima visita puede ser <a  href="https://bac.org.ar/actividades/">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            Comuna 6
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            El <strong>Museo Nacional de Ciencias Naturales</strong> (Luis Viale 1052, Caballito) ofrece visitas guiadas gratuitas para escuelas especiales de Discapacidad Visual y grupos escolares con discapacidad visual. También los niños o adultos no videntes podrán recorrer el museo y tener contacto con una amplia variedad de materiales. Reconocer formas corporales, tipos de tegumento, formas de locomoción y reconocer sonidos de aves. <strong>Tu próxima visita puede ser <a  href="https://www.macnconicet.gob.ar/visitas-2-2/grupos-escolares/">acá</a></strong>
+          </div>
+          <div class="accordion-body">
+            El <strong>Museo de Esculturas Luis Perlotti</strong> (Pujol 644, Caballito) cuenta con entrada gratuita para personas con discapacidad más un acompañante. También cuenta con los siguientes servicios para visitantes con movilidad reducida: ascensor, baños accesibles y aro magnético en auditorio. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/museos/museo-de-esculturas-luis-perlotti">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            Comuna 7
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            El <strong>Espacio Cultural Marcó del Pont</strong> (Gral. José Artigas 202, Flores) propone un lugar de encuentro de las diferentes ONG, instituciones, asociaciones civiles de niños y adultos con discapacidad donde lo que se prioriza es la integración a partir de la participación en las diversas actividades culturales. <strong>Tu próxima visita puede ser <a  href="https://www.facebook.com/ccmpont/?locale=es_LA">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEight">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            Comuna 8
+          </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº10</strong> (Montiel y 2 de Abril, Villa Lugano) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNine">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            Comuna 9
+          </button>
+        </h2>
+        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº14</strong> (Pasaje La Facultad 1772, Parque Avellaneda) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº24</strong> (Yrupé 6700, Mataderos) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+            Comuna 10
+          </button>
+        </h2>
+        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº4</strong> (Yerbal 5025, Villa Luro) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº31</strong> (Av. Segurola 2140) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº27</strong> (Ramón Falcón 4778, Villa Luro) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEleven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+            Comuna 11
+          </button>
+        </h2>
+        <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº30</strong> (Pasaje Dr. Alejandro Posadas 2760, Villa Deboto) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwelve">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+            Comuna 12
+          </button>
+        </h2>
+        <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº8</strong> (Condarco 5155, Villa Pueyrredón) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº20</strong> (Superí 4432, Saavedra) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThirteen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+            Comuna 13
+          </button>
+        </h2>
+        <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Centro Cultural Colegiales</strong> (Conde 943, Colegiales).
+          </div>
+          <div class="accordion-body">
+            <strong>Centro Cultural Julio Cortázar</strong> (O'Higgins 3050, Núñez).
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFourteen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+            Comuna 14
+          </button>
+        </h2>
+        <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            El <strong>Centro Cultural Tato Bores</strong> (Soler 3919, Palermo) brinda distintos talleres en su planta baja. Tu próxima parada puede ser <a  href="https://goo.gl/maps/QfZrXADdPSxBGSCv7">acá</a>.
+          </div>
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº9</strong> (Paraguay 5170, Palermo) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            El <strong>Teatro Ciego</strong> (Borges 1974, Palermo) posibilita la participación plena de personas con discapacidad visual en todas sus actividades. <strong>Tu próxima visita puede ser <a  href="https://teatrociego.org/el-teatro/">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item" id="ultimo">
+        <h2 class="accordion-header" id="headingFifteen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+            Comuna 15
+          </button>
+        </h2>
+        <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº5</strong> (Heredia 1253, Villa Ortuzar) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº15</strong> (Jufré 346/350, Villa Crespo) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+          <div class="accordion-body">
+            El <strong>Centro de Día Nº26</strong> (Estomba 294, Villa Ortúzar) ofrece actividades reflexivas, recreativas, culturales, corporales y cognitivas. También cuenta con un Centro Modelo para atención a personas mayores con deterioro cognitivo. <strong>Tu próxima visita puede ser <a  href="https://buenosaires.gob.ar/red-de-bienestar/centros-de-dia">acá</a>.</strong>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+
+    <footer>
+
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <div class="logo-ap">
+                    <img src="../DSD/img/logo-ap.png" alt="">
+                </div>
+                <div class="texto">
+                    <p>Somos un grupo de jóvenes estudiantes de Desarrollo Web 2 Intensivo, y creamos esta página web con el objetivo de brindar a personas con discapacidades el acceso a las actividades culturales y deportivas que da la Ciudad Autónoma de Buenos Aires.</p>
+                </div>
+              </div>
+              <div class="col order-5">
+                <h2>Más información</h2>
+                <a href="https://www.argentina.gob.ar/andis">Agencia Nacional de Discapacidad</a><br>
+                <a href="https://buenosaires.gob.ar/copidis">COPIDIS</a><br>
+                <a href="https://buenosaires.gob.ar/inicio/">Buenos Aires Ciudad</a><br>
+                <a href="https://www.argentina.gob.ar/">Argentina.gob.ar</a>
+              </div>
+              <div class="col order-1">
+                <h2>Teléfonos útiles</h2>
+                <a href="">Atención Ciudadana: 147</a><br>
+                <a href="">Niñez y Adolescencia: 102</a><br>
+                <a href="">Línea Social: 108</a>
+              </div>
+            </div>
+          </div>
+
+        <div class="box-copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2023 <b>Inclu-Yendo</b></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/script_search_bar.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+
+</body>
+
+</html>

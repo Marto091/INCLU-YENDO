@@ -1,0 +1,85 @@
+header{
+    height: 60px;
+    background-color: #707070;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #7F7F7F;
+    overflow: hidden;
+}
+#l-header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    overflow:hidden;
+}
+#imagen-logo{
+    display: flex;
+    height: 100%;
+    overflow:hidden;
+    margin-right: 20px;
+    width:50px;
+}
+#imagen-logo img{
+    height:100%;
+    width:100%;
+}
+
+#container-text{
+    display: flex;
+    align-items: center;
+    background-color: #565656;
+    color: #B3B3B3;
+    height: 100%;
+    padding: 10px;
+    border-radius: 12px;
+}
+#l-header span h1{
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+}
+#m-header{
+    width: 25%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding:2px;
+    background-color: none;
+    border-radius: 20px;
+    padding: 6px;
+}
+#m-header button{
+    font-weight: bold;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #565656;
+    color: #B3B3B3;
+    border-color: #939393;
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#r-header{
+    overflow: hidden;
+    display: flex;
+    margin-right: 10px;
+    padding:4px;
+}
+
+#r-header button{
+    font-weight: bold;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #565656;
+    color: #B3B3B3;
+    border-color: #939393;
+    font-family: 'Roboto Condensed', sans-serif;
+}
